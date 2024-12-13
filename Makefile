@@ -1,14 +1,15 @@
-# Variables
+ # Variables
 IMAGE_NAME = hangman-app
 CONTAINER_NAME = hangman-container
+PORT = 5000
 
 # Build the Docker image
 build:
 	docker build -t $(IMAGE_NAME) .
 
-# Run the container interactively
+# Run the container interactively with port mapping
 run:
-	docker run -it --name $(CONTAINER_NAME) $(IMAGE_NAME)
+	docker run -it -p $(PORT):$(PORT) --name $(CONTAINER_NAME) $(IMAGE_NAME)
 
 # Clean up: Remove the container and image
 clean:
