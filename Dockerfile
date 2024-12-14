@@ -19,3 +19,5 @@ EXPOSE 5000
 
 # Set the default command to run your Flask app
 CMD ["python", "app.py"]
+
+
